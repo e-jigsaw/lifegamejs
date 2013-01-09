@@ -1,0 +1,18 @@
+{
+	"name": "lifegamejs",
+	"description": "lifegame on javascript",
+	"version": "0.0.1",
+	"author": "jigsaw",
+	"dependencies": {
+
+	},
+	"devDependencies": {
+		"coffee-script": "1.4.0",
+		"grunt": "0.3.17",
+		"grunt-coffee": "0.0.6",
+		"grunt-contrib": "0.3.0"
+	},
+	"scripts": {
+		"start": "coffee -b -c grunt.coffee; grunt coffee jade less"
+	}
+}
