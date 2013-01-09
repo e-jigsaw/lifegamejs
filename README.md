@@ -4,8 +4,4 @@ lifegame in javascript
 
 ===========================
 
-require: node.js, npm
-
-```npm start```
-
-then open ```index.html``` your browser.
+http://e-jigsaw.github.com/lifegamejs/knockout
