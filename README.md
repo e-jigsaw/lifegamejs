@@ -1,0 +1,2 @@
+# lifegamejs
+lifegame in javascript
