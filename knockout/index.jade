@@ -6,17 +6,12 @@ html
 		link(rel="stylesheet", href="css/style.css")
 	body
 		h1 lifegamejs
-		label(for="width") Width:
-		input(type="text", data-bind="value: width", id="width", size="3")
-		label(for="height") Height:
-		input(type="text", data-bind="value: height", id="height", size="3")
-		button(data-bind="click: create") Create
 		button(data-bind="click: next") Next
 		button(data-bind="click: play") Play
 		button(data-bind="click: stop") Stop
 		#field(data-bind="template: {name : 'cellTmpl', foreach : field}")
 		script(type="text/html", id="cellTmpl")
-			.row(data-bind="foreach: $data, style: {width : $root.rowSize + 'px'}")
+			.row(data-bind="foreach: $data")
 				.cell(data-bind="attr: {class : 'cell ' + $data.status()}, click: $root.reverseCell.bind($data, $data.x, $data.y)")
 		script(type="text/javascript", src="js/lib/knockout-2.2.0.js")
 		script(type="text/javascript", src="js/lifegame.js")
