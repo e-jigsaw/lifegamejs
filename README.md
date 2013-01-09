@@ -1,6 +1,9 @@
 # lifegamejs
+
 lifegame in javascript
+
 ===========================
+
 require: node.js, npm
 
 ```npm start```
