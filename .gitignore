@@ -1,2 +1,7 @@
 .DS_Store
 node_modules
+*.coffee
+*.jade
+*.less
+package.json
+grunt.js
