@@ -7,6 +7,7 @@
     this.width = 20;
     this.height = 20;
     this.field = ko.observableArray();
+    this.playing = ko.observable(0);
     this.initialize = function() {
       var row, x, y, _i, _j, _ref, _ref1, _results;
       _results = [];
@@ -119,9 +120,11 @@
       var arg;
       arg = arguments;
       self.next();
+      self.playing(1);
       return self.timerId = setTimeout(arg.callee, 300);
     };
     this.stop = function() {
+      self.playing(0);
       return clearTimeout(self.timerId);
     };
     this.timerId = 0;
