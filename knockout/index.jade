@@ -7,8 +7,8 @@ html
 	body
 		h1 lifegamejs
 		button(data-bind="click: next") Next
-		button(data-bind="click: play") Play
-		button(data-bind="click: stop") Stop
+		button(data-bind="click: play, enable: !playing()") Play
+		button(data-bind="click: stop, enable:  playing()") Stop
 		#field(data-bind="template: {name : 'cellTmpl', foreach : field}")
 		script(type="text/html", id="cellTmpl")
 			.row(data-bind="foreach: $data")
