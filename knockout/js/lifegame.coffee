@@ -9,6 +9,9 @@ do ->
 		# universe
 		this.field = ko.observableArray()
 
+		# if pressed play button then 1 else 0
+		this.playing = ko.observable(0)
+
 		this.initialize = ->
 			# create universe
 			for x in [0..this.width-1]
@@ -106,9 +109,11 @@ do ->
 		this.play = ->
 			arg = arguments
 			self.next()
+			self.playing 1
 			self.timerId = setTimeout arg.callee, 300
 
 		this.stop = ->
+			self.playing 0
 			clearTimeout self.timerId
 
 		this.timerId = 0
